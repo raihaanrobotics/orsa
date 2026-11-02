@@ -99,7 +99,7 @@
     </div>
 
     <!-- Header Navigation -->
-    <header class="w-full max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-10 flex justify-between items-center z-30">
+    <header class="w-full max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-10 flex justify-between items-center z-30">
         <div class="text-lg sm:text-2xl font-[300] tracking-[0.25em] sm:tracking-[0.3em] cursor-pointer">
             ORSA
         </div>
@@ -109,7 +109,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 py-4 sm:py-12 flex flex-col items-center text-center z-20">
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-12 flex flex-col items-center text-center z-20">
         
         <!-- Hero Title -->
         <h1 class="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-[200] tracking-tight mb-5 sm:mb-6 uppercase leading-[1.1] sm:leading-[0.95]">
@@ -163,48 +163,67 @@
         </div>
 
         <!-- All-White Minimalist Feature Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 w-full text-left mb-10 sm:mb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8 w-full text-left mb-10 sm:mb-16">
             
             <!-- Card 1: On-Wrist Visual Metrics -->
-            <div class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
-                    <i data-lucide="bar-chart-3" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider">On-Wrist Data Visuals</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        View interactive 7-day trajectory graphs and 30-day historical bar charts directly on your watch screen. Zero phone companion app required.
+                    </p>
                 </div>
-                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider">On-Wrist Data Visuals</h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                    View interactive 7-day trajectory graphs and 30-day historical bar charts directly on your watch screen. Zero phone companion app required.
-                </p>
             </div>
 
             <!-- Card 2: Device & Compatibility Requirements -->
-            <div class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
-                    <i data-lucide="cpu" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
+                        <i data-lucide="cpu" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider">Device Requirements</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Requires Wear OS 4+<br>
+                        Galaxy Watch 4+, FE, Classic & Ultra<br>
+                        Google Pixel Watch 1+<br>
+                        OnePlus Watch 2+<br>
+                        Xiaomi Watch 2+<br>
+                        OPPO Watch X & newer models
+                    </p>
                 </div>
-                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider">Device Requirements</h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                    Requires Wear OS 4+.<br>
-                    Galaxy Watch 4+, FE, Classic & Ultra<br>
-                    Google Pixel Watch 1+<br>
-                    OnePlus Watch 2+<br>
-                    Xiaomi Watch 2+<br>
-                    OPPO Watch X & newer models
-                </p>
             </div>
 
             <!-- Card 3: Got Questions? (Linked to FAQ / QnA Page) -->
-            <a href="faq.html" class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 block group cursor-pointer">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300] group-hover:border-white/40 transition-colors">
-                    <i data-lucide="help-circle" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+            <a href="faq.html" class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10 block group cursor-pointer flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300] group-hover:border-white/40 transition-colors">
+                        <i data-lucide="help-circle" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider flex items-center justify-between">
+                        Got Questions? 
+                        <span class="text-xs text-white/50 group-hover:text-white transition-colors">&rarr;</span>
+                    </h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Check our Q&A page or reach out via beta email for support. Tap this card.
+                    </p>
                 </div>
-                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider flex items-center justify-between">
-                    Got Questions? 
-                    <span class="text-xs text-white/50 group-hover:text-white transition-colors">&rarr;</span>
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                    Check our Q&A page or reach out via beta email for support. Tap this card.
-                </p>
             </a>
+
+            <!-- Card 4: Contact Us -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
+                        <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+                    </div>
+                    <h3 class="font-[300] text-sm sm:text-lg mb-2 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD] uppercase tracking-wider">Contact Us</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Need assistance or have feedback? Reach out directly via email at <a href="orsahealth@gmail.com" class="text-white underline hover:text-[#00F5D4] transition-colors">orsahealth@gmail.com</a>.
+                    </p>
+                </div>
+            </div>
 
         </div>
 
