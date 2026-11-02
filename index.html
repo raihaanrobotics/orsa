@@ -24,19 +24,19 @@
         /* Floating Glow Orbs Keyframes */
         @keyframes float-teal {
             0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(40px, 60px) scale(1.15); }
+            50% { transform: translate(30px, 40px) scale(1.15); }
         }
         @keyframes float-green {
             0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(-50px, 40px) scale(1.1); }
+            50% { transform: translate(-35px, 30px) scale(1.1); }
         }
         @keyframes float-pink {
             0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(40px, -50px) scale(1.2); }
+            50% { transform: translate(30px, -35px) scale(1.2); }
         }
         @keyframes float-purple {
             0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(-40px, -40px) scale(1.1); }
+            50% { transform: translate(-30px, -30px) scale(1.1); }
         }
 
         .orb-teal {
@@ -81,16 +81,19 @@
 </head>
 <body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-[#00F5D4] selection:text-black">
 
-    <!-- Soft, Subtle Floating Glow Orbs Background -->
+    <!-- High Visibility Mobile Glowing Ambient Background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <!-- Teal Orb -->
-        <div class="absolute top-[5%] left-[5%] sm:left-[12%] w-[280px] sm:w-[520px] h-[280px] sm:h-[520px] rounded-full blur-[100px] sm:blur-[140px] opacity-[0.18] orb-teal"></div>
-        <!-- Green Orb -->
-        <div class="absolute top-[55%] left-[2%] sm:left-[8%] w-[260px] sm:w-[480px] h-[260px] sm:h-[480px] rounded-full blur-[110px] sm:blur-[150px] opacity-[0.16] orb-green"></div>
-        <!-- Pink Orb -->
-        <div class="absolute top-[15%] right-[2%] sm:right-[8%] w-[280px] sm:w-[520px] h-[280px] sm:h-[520px] rounded-full blur-[120px] sm:blur-[160px] opacity-[0.16] orb-pink"></div>
-        <!-- Purple Orb -->
-        <div class="absolute bottom-[5%] right-[5%] sm:right-[15%] w-[300px] sm:w-[580px] h-[300px] sm:h-[580px] rounded-full blur-[130px] sm:blur-[170px] opacity-[0.18] orb-purple"></div>
+        <!-- Teal Orb: Positioned high near hero title -->
+        <div class="absolute top-[2%] left-[-10%] sm:left-[12%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[65px] sm:blur-[140px] opacity-[0.45] sm:opacity-[0.20] orb-teal"></div>
+        
+        <!-- Pink Orb: Positioned top-right behind title/form -->
+        <div class="absolute top-[18%] right-[-10%] sm:right-[8%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[70px] sm:blur-[160px] opacity-[0.40] sm:opacity-[0.18] orb-pink"></div>
+        
+        <!-- Green Orb: Positioned mid-page behind cards -->
+        <div class="absolute top-[50%] left-[-5%] sm:left-[8%] w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] rounded-full blur-[60px] sm:blur-[150px] opacity-[0.45] sm:opacity-[0.18] orb-green"></div>
+        
+        <!-- Purple Orb: Positioned bottom-right near footer -->
+        <div class="absolute bottom-[2%] right-[-5%] sm:right-[15%] w-[340px] sm:w-[580px] h-[340px] sm:h-[580px] rounded-full blur-[75px] sm:blur-[170px] opacity-[0.50] sm:opacity-[0.22] orb-purple"></div>
     </div>
 
     <!-- Header Navigation -->
@@ -118,7 +121,7 @@
 
         <!-- Subtitle in Nunito Light (font-[300]) -->
         <p class="text-sm sm:text-lg md:text-xl text-white/80 max-w-2xl sm:max-w-3xl mb-8 sm:mb-12 leading-relaxed font-[300] px-2">
-            Orsa turns your smartwatch heart rate and sleep readings into a clear daily energy score. Learn when your body is fully recharged to push hard, or when it needs extra rest—all computed 100% privately on your wrist.
+            Orsa turns your smartwatch heart rate and sleep readings into a clear daily energy score. Learn when your body is fully recharged to push hard, or when it needs extra rest. Everything computed 100% privately on your wrist.
         </p>
 
         <!-- Glass Beta Signup Form Card -->
