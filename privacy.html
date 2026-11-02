@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Orsa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Floating Glow Orbs Keyframes */
+        @keyframes float-teal {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, 40px) scale(1.15); }
+        }
+        @keyframes float-green {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-35px, 30px) scale(1.1); }
+        }
+        @keyframes float-pink {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, -35px) scale(1.2); }
+        }
+        @keyframes float-purple {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-30px, -30px) scale(1.1); }
+        }
+
+        .orb-teal {
+            background: #00F5D4;
+            animation: float-teal 14s ease-in-out infinite;
+        }
+        .orb-green {
+            background: #00FF87;
+            animation: float-green 17s ease-in-out infinite;
+        }
+        .orb-pink {
+            background: #FF007F;
+            animation: float-pink 16s ease-in-out infinite;
+        }
+        .orb-purple {
+            background: #9D4EDD;
+            animation: float-purple 18s ease-in-out infinite;
+        }
+
+        /* Ultra-light glassmorphic card styling */
+        .orsa-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
+
+    <!-- Subtle, Diffusion-Blended Ambient Mobile Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <!-- Teal Orb -->
+        <div class="absolute top-[2%] left-[-10%] sm:left-[12%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[110px] sm:blur-[140px] opacity-[0.22] sm:opacity-[0.20] orb-teal"></div>
+        
+        <!-- Pink Orb -->
+        <div class="absolute top-[18%] right-[-10%] sm:right-[8%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[120px] sm:blur-[160px] opacity-[0.20] sm:opacity-[0.18] orb-pink"></div>
+        
+        <!-- Green Orb -->
+        <div class="absolute top-[50%] left-[-5%] sm:left-[8%] w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] rounded-full blur-[110px] sm:blur-[150px] opacity-[0.20] sm:opacity-[0.18] orb-green"></div>
+        
+        <!-- Purple Orb -->
+        <div class="absolute bottom-[2%] right-[-5%] sm:right-[15%] w-[340px] sm:w-[580px] h-[340px] sm:h-[580px] rounded-full blur-[130px] sm:blur-[170px] opacity-[0.22] sm:opacity-[0.22] orb-purple"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-10 flex justify-start items-center z-30">
+        <div class="text-lg sm:text-2xl font-[300] tracking-[0.25em] sm:tracking-[0.3em] cursor-pointer">
+            ORSA
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-4xl mx-auto px-4 sm:px-8 py-4 sm:py-12 z-20 text-left">
+        
+        <!-- Page Title -->
+        <div class="mb-8 sm:mb-10 text-center sm:text-left">
+            <h1 class="text-2xl sm:text-5xl font-[200] tracking-tight mb-2 sm:mb-3 uppercase">
+                Privacy Policy
+            </h1>
+            <p class="text-[11px] sm:text-sm font-[300] text-white/50 tracking-wider">
+                Last Updated: November 2, 2026
+            </p>
+        </div>
+
+        <!-- Policy Content Card Container -->
+        <div class="orsa-glass-card p-5 sm:p-10 rounded-2xl sm:rounded-[32px] space-y-6 sm:space-y-8 font-[300] text-xs sm:text-base text-white/80 leading-relaxed shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/10">
+            
+            <p class="text-white/90">
+                Orsa ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how our Wear OS application collects, uses, and safeguards your health and biometric information.
+            </p>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    1. 100% On-Device & Offline Architecture
+                </h2>
+                <p>
+                    Orsa is built as an offline-first application. All processing, biometric algorithms, trend evaluations, and score calculations (including Heart Rate Variability, Resting Heart Rate, and Sleep Restorativeness) occur entirely on your local Wear OS smartwatch and connected Android device.
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li>We do not operate external servers to collect your personal health metrics.</li>
+                    <li>Your health data never leaves your device unless you explicitly export a CSV log to your own local device storage.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    2. Information We Access via Health Connect & Permissions
+                </h2>
+                <p>
+                    To compute your daily readiness and body fuel scores, Orsa requests read-only access to specific health permissions via Google Health Connect and Wear OS system APIs:
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Heart Rate Data:</strong> Used to evaluate sleeping resting heart rate (RHR) and RHR Nadir timing.</li>
+                    <li><strong class="text-white font-[300]">Heart Rate Variability (HRV / RMSSD):</strong> Used to calculate autonomic nervous system recovery status.</li>
+                    <li><strong class="text-white font-[300]">Sleep Sessions & Sleep Stages:</strong> Used to calculate total duration, deep sleep, and REM sleep restorativeness ratios.</li>
+                    <li><strong class="text-white font-[300]">Body Sensor & Foreground Permissions:</strong> Used to perform background data syncing between Health Connect, local storage, tiles, and complications.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    3. Limited Use Disclosure (Google Play & Health Connect Policy)
+                </h2>
+                <p>
+                    Orsa strictly adheres to the Google Health Connect Developer Policy, including the Limited Use requirements:
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Specific Use Only:</strong> Health Connect data is accessed solely to provide and improve user-facing features (calculating recovery scores, trends, tiles, and complications).</li>
+                    <li><strong class="text-white font-[300]">No Data Transfers:</strong> We do not transfer, sell, or disclose Health Connect or sensor data to any third parties, advertising platforms, data brokers, or information resellers.</li>
+                    <li><strong class="text-white font-[300]">No Advertising:</strong> Health and biometric data is never used for advertising purposes.</li>
+                    <li><strong class="text-white font-[300]">No Human Inspection:</strong> No human reads or inspects your Health Connect data.</li>
+                    <li><strong class="text-white font-[300]">No AI Training:</strong> Health Connect data is never used to train artificial intelligence or machine learning models outside your local hardware.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    4. Data Storage & Retention
+                </h2>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Local Processing:</strong> All processed biometric records are handled and maintained securely on your local device storage.</li>
+                    <li><strong class="text-white font-[300]">Data Deletion:</strong> You can delete all application data at any time by clearing the app data in Android system settings or by uninstalling the Orsa app from your watch and phone.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    5. Third-Party Services
+                </h2>
+                <p>
+                    Orsa does not integrate third-party tracking scripts, advertising SDKs, or external analytics frameworks.
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Google Play In-App Billing:</strong> If you purchase a premium license, payment processing is handled entirely by Google Play Billing services subject to Google's Privacy Policy. Orsa does not store or access your payment card information.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    6. Medical Disclaimer
+                </h2>
+                <p class="text-white/70">
+                    Orsa is designed for general wellness, fitness tracking, and personal awareness only. It is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition or disease.
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    7. Children's Privacy
+                </h2>
+                <p class="text-white/70">
+                    Orsa does not knowingly collect or solicit personal data from children under the age of 13 (or under 16 in certain jurisdictions).
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    8. Changes to This Privacy Policy
+                </h2>
+                <p class="text-white/70">
+                    We may update our Privacy Policy periodically to reflect app updates or regulatory changes. Any changes will be posted on this page with an updated "Last Updated" date.
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    9. Contact Us
+                </h2>
+                <p>
+                    If you have any questions or feedback regarding this Privacy Policy, please contact us at:
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Email:</strong> support@orsaapp.com</li>
+                    <li><strong class="text-white font-[300]">Developer Name:</strong> Raihaan</li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer stretched to screen ends -->
+    <footer class="w-full max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-center z-20 text-[10px] sm:text-[11px] font-[300] text-white/40 uppercase tracking-widest">
+        <p class="text-center md:text-left leading-relaxed font-[200]">
+            Orsa is created for general health and energy awareness. Not a medical device.
+        </p>
+        <p class="shrink-0 font-[200]">&copy; 2026 Orsa Ecosystem. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
