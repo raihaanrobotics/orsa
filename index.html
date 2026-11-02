@@ -123,7 +123,7 @@
 
         <!-- Subtitle in Nunito Light (font-[300]) -->
         <p class="text-sm sm:text-lg md:text-xl text-white/80 max-w-2xl sm:max-w-3xl mb-8 sm:mb-12 leading-relaxed font-[300] px-2">
-            Orsa turns your smartwatch heart rate and sleep readings into a clear daily energy score. Learn when your body is fully recharged to push hard, or when it needs extra rest. Everything computed 100% privately on your wrist.
+            Orsa turns your smartwatch heart rate and sleep readings into a clear daily energy score. Learn when your body and nervous system is fully recharged to push hard, or when it needs extra rest. Everything computed 100% privately on your wrist.
         </p>
 
         <!-- Glass Beta Signup Form Card -->
@@ -165,38 +165,46 @@
         <!-- All-White Minimalist Feature Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 w-full text-left mb-10 sm:mb-16">
             
-            <!-- Card 1 -->
+            <!-- Card 1: On-Wrist Visual Metrics -->
+            <div class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+                </div>
+                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-white uppercase tracking-wider">On-Wrist Data Visuals</h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                    View interactive 7-day trajectory graphs and 30-day historical bar charts directly on your watch screen. Zero phone companion app required.
+                </p>
+            </div>
+
+            <!-- Card 2: Device & Compatibility Requirements -->
             <div class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
                     <i data-lucide="cpu" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
                 </div>
-                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-white uppercase tracking-wider">Smart Readiness Score</h3>
+                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-white uppercase tracking-wider">Device Requirements</h3>
                 <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                    Wake up to a single 0–100% fuel score calculated from overnight heart rate variability and deep sleep ratios.
+                    Requires Wear OS 4+. Supported on:<br>
+                    Galaxy Watch 4+, FE, Classic & Ultra<br>
+                    Google Pixel Watch 1+<br>
+                    OnePlus Watch 2+<br>
+                    Xiaomi Watch 2+<br>
+                    OPPO Watch X & newer models
                 </p>
             </div>
 
-            <!-- Card 2 -->
-            <div class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
-                    <i data-lucide="watch" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
+            <!-- Card 3: Got Questions? (Linked to FAQ / QnA Page) -->
+            <a href="faq.html" class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 block group cursor-pointer">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300] group-hover:border-white/40 transition-colors">
+                    <i data-lucide="help-circle" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
                 </div>
-                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-white uppercase tracking-wider">Made for Wear OS</h3>
+                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-white uppercase tracking-wider flex items-center justify-between">
+                    Got Questions? 
+                    <span class="text-xs text-white/50 group-hover:text-white transition-colors">&rarr;</span>
+                </h3>
                 <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                    Designed explicitly for smartwatches. Check your 7-day trajectory graphs and custom color themes right from your wrist.
+                    Not a medical device. Designed for general wellness and fitness tracking awareness. Check our Q&A page or reach out via beta email for support.
                 </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="orsa-glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center mb-4 sm:mb-6 text-white font-[300]">
-                    <i data-lucide="shield-check" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]"></i>
-                </div>
-                <h3 class="font-[300] text-sm sm:text-lg mb-2 text-white uppercase tracking-wider">100% On-Device Privacy</h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                    Your body data never uploads to external cloud servers. All health calculations run securely on your own device.
-                </p>
-            </div>
+            </a>
 
         </div>
 

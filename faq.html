@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orsa — Frequently Asked Questions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Floating Glow Orbs Keyframes */
+        @keyframes float-teal {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, 40px) scale(1.15); }
+        }
+        @keyframes float-green {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-35px, 30px) scale(1.1); }
+        }
+        @keyframes float-pink {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, -35px) scale(1.2); }
+        }
+        @keyframes float-purple {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-30px, -30px) scale(1.1); }
+        }
+
+        .orb-teal {
+            background: #00F5D4;
+            animation: float-teal 14s ease-in-out infinite;
+        }
+        .orb-green {
+            background: #00FF87;
+            animation: float-green 17s ease-in-out infinite;
+        }
+        .orb-pink {
+            background: #FF007F;
+            animation: float-pink 16s ease-in-out infinite;
+        }
+        .orb-purple {
+            background: #9D4EDD;
+            animation: float-purple 18s ease-in-out infinite;
+        }
+
+        /* Glassmorphic FAQ Card Styling */
+        .orsa-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+        .orsa-glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.35);
+            box-shadow: 0 0 30px -5px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
+
+    <!-- Subtle, Diffusion-Blended Ambient Mobile Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <!-- Teal Orb -->
+        <div class="absolute top-[2%] left-[-10%] sm:left-[12%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[110px] sm:blur-[140px] opacity-[0.22] sm:opacity-[0.20] orb-teal"></div>
+        
+        <!-- Pink Orb -->
+        <div class="absolute top-[18%] right-[-10%] sm:right-[8%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[120px] sm:blur-[160px] opacity-[0.20] sm:opacity-[0.18] orb-pink"></div>
+        
+        <!-- Green Orb -->
+        <div class="absolute top-[50%] left-[-5%] sm:left-[8%] w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] rounded-full blur-[110px] sm:blur-[150px] opacity-[0.20] sm:opacity-[0.18] orb-green"></div>
+        
+        <!-- Purple Orb -->
+        <div class="absolute bottom-[2%] right-[-5%] sm:right-[15%] w-[340px] sm:w-[580px] h-[340px] sm:h-[580px] rounded-full blur-[130px] sm:blur-[170px] opacity-[0.22] sm:opacity-[0.22] orb-purple"></div>
+    </div>
+
+    <!-- Header Navigation (No Home Back Button) -->
+    <header class="w-full max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-10 flex justify-between items-center z-30">
+        <div class="text-lg sm:text-2xl font-[300] tracking-[0.25em] sm:tracking-[0.3em]">
+            ORSA
+        </div>
+        <a href="privacy.html" class="text-[10px] sm:text-xs font-[300] text-white/60 hover:text-white transition-colors uppercase tracking-widest px-3.5 sm:px-4 py-2 rounded-full border border-white/10 hover:border-white/40 bg-white/[0.03]">
+            Privacy Policy
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-12 flex flex-col items-center z-20">
+        
+        <!-- FAQ Header Title -->
+        <div class="text-center mb-10 sm:mb-16">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-[200] tracking-tight mb-4 uppercase leading-[1.1]">
+                Frequently Asked <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD]">
+                    Questions
+                </span>
+            </h1>
+            <p class="text-xs sm:text-base text-white/70 max-w-xl mx-auto font-[300] leading-relaxed">
+                Everything you need to know about the Orsa closed beta, biometric data security, device compatibility, and energy scoring engine.
+            </p>
+        </div>
+
+        <!-- FAQ Accordion / Cards Stack -->
+        <div class="flex flex-col gap-4 sm:gap-6 w-full mb-12 sm:mb-20">
+            
+            <!-- FAQ Item 1 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#00F5D4] font-[200]">01</span> 
+                    What is Orsa and how does it calculate my daily energy score?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    Orsa evaluates your nightly resting heart rate (RHR) trends and heart rate variability (HRV) ratios to generate a single 0–100% recovery fuel score. This tells you precisely when your body is fully recharged to train hard or when it requires extra rest.
+                </p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#00FF87] font-[200]">02</span> 
+                    Do I need a companion phone app to view my stats?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    No. Orsa operates completely on your wrist as a standalone Wear OS application. You can view interactive 7-day trajectory graphs and 30-day historical bar charts directly on your watch screen without needing an active phone companion app open.
+                </p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#FF007F] font-[200]">03</span> 
+                    What are the exact device and OS requirements?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    Orsa requires Wear OS 4.0 or newer. Compatible hardware includes Samsung Galaxy Watch 4, 5, 6, 7, FE, Classic & Ultra series, Google Pixel Watch 1, 2, 3+, OnePlus Watch 2+, Xiaomi Watch 2+, and OPPO Watch X. It also relies on an Android phone running Google Health Connect for zero-cloud background synchronization.
+                </p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#9D4EDD] font-[200]">04</span> 
+                    Is my health and biometric data secure and private?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    Yes, 100% private. Your personal biometric data never uploads to external cloud servers. All metric computations run securely on your own device, and you maintain full ownership with options to export your logs to local CSV storage at any time.
+                </p>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#00F5D4] font-[200]">05</span> 
+                    Can I display Orsa energy scores directly on my watch face?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    Yes. Orsa includes built-in Wear OS watch face complications and dedicated glanceable Tiles. You can monitor your current fuel percentage and daily recovery trend instantly without opening the full application.
+                </p>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#00FF87] font-[200]">06</span> 
+                    What visual customization options does Orsa offer?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    Orsa supports custom aesthetic color themes on-device. You can personalize your watch UI, trajectory graphs, and complication accents with high-contrast ambient palettes tailored for AMOLED displays.
+                </p>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#FF007F] font-[200]">07</span> 
+                    Does Orsa drain smartwatch battery life in the background?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    No. Orsa is optimized for ultra-low energy consumption. Instead of running continuous background sensor polling, it pulls consolidated biometric intervals directly from Google Health Connect during natural wake-up events.
+                </p>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#9D4EDD] font-[200]">08</span> 
+                    How does the Closed Beta testing invitation work?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    When you submit your Play Store Gmail address on our landing page, our team manually whitelists your email for Google Play closed testing. You will receive an official Google testing link and setup instructions directly in your inbox.
+                </p>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
+                    <span class="text-xs text-[#00F5D4] font-[200]">09</span> 
+                    Is Orsa a certified medical device?
+                </h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+                    No. Orsa is created purely for general health, wellness, and fitness tracking awareness. It is not a medical device and should not be used to diagnose, treat, cure, or prevent any medical conditions.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer stretched to screen ends -->
+    <footer class="w-full max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-center z-25 text-[9px] sm:text-[11px] font-[300] text-white/40 uppercase tracking-widest">
+        <p class="text-center md:text-left leading-relaxed font-[200] text-[9px] sm:text-[11px]">
+            Orsa is created for general health and energy awareness. Not a medical device.
+        </p>
+        <p class="shrink-0 font-[200] text-[9px] sm:text-[11px]">&copy; 2026 Orsa Ecosystem. All rights reserved.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
