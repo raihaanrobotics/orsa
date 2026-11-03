@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orsa — Setup & User Guide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Floating Glow Orbs Keyframes */
+        @keyframes float-teal {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, 40px) scale(1.15); }
+        }
+        @keyframes float-green {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-35px, 30px) scale(1.1); }
+        }
+        @keyframes float-pink {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, -35px) scale(1.2); }
+        }
+        @keyframes float-purple {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-30px, -30px) scale(1.1); }
+        }
+
+        .orb-teal {
+            background: #00F5D4;
+            animation: float-teal 14s ease-in-out infinite;
+        }
+        .orb-green {
+            background: #00FF87;
+            animation: float-green 17s ease-in-out infinite;
+        }
+        .orb-pink {
+            background: #FF007F;
+            animation: float-pink 16s ease-in-out infinite;
+        }
+        .orb-purple {
+            background: #9D4EDD;
+            animation: float-purple 18s ease-in-out infinite;
+        }
+
+        /* Glassmorphic Card Styling */
+        .orsa-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+        .orsa-glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.35);
+            box-shadow: 0 0 30px -5px rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
+
+    <!-- Subtle, Diffusion-Blended Ambient Mobile Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <!-- Teal Orb -->
+        <div class="absolute top-[2%] left-[-10%] sm:left-[12%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[110px] sm:blur-[140px] opacity-[0.22] sm:opacity-[0.20] orb-teal"></div>
+        
+        <!-- Pink Orb -->
+        <div class="absolute top-[18%] right-[-10%] sm:right-[8%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[120px] sm:blur-[160px] opacity-[0.20] sm:opacity-[0.18] orb-pink"></div>
+        
+        <!-- Green Orb -->
+        <div class="absolute top-[50%] left-[-5%] sm:left-[8%] w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] rounded-full blur-[110px] sm:blur-[150px] opacity-[0.20] sm:opacity-[0.18] orb-green"></div>
+        
+        <!-- Purple Orb -->
+        <div class="absolute bottom-[2%] right-[-5%] sm:right-[15%] w-[340px] sm:w-[580px] h-[340px] sm:h-[580px] rounded-full blur-[130px] sm:blur-[170px] opacity-[0.22] sm:opacity-[0.22] orb-purple"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-10 flex justify-between items-center z-30">
+        <a href="index.html" class="text-lg sm:text-2xl font-[300] tracking-[0.25em] sm:tracking-[0.3em] hover:opacity-80 transition-opacity">
+            ORSA
+        </a>
+        <div class="flex items-center gap-3">
+            <a href="privacy.html" class="text-[10px] sm:text-xs font-[300] text-white/60 hover:text-white transition-colors uppercase tracking-widest px-3.5 sm:px-4 py-2 rounded-full border border-white/10 hover:border-white/40 bg-white/[0.03]">
+                Privacy Policy
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 flex flex-col items-center z-20">
+        
+        <!-- Page Header Title -->
+        <div class="text-center mb-10 sm:mb-16">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-[200] tracking-tight mb-4 uppercase leading-[1.1]">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD]">
+                    Setup & User Guide
+                </span>
+            </h1>
+            <p class="text-xs sm:text-base text-white/70 max-w-xl mx-auto font-[300] leading-relaxed px-2">
+                Follow this complete 6-step walkthrough to join our testing pool, configure Health Connect across your specific phone brand, build your baseline, and submit feedback.
+            </p>
+        </div>
+
+        <!-- Steps Grid Stack -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 w-full mb-12 sm:mb-20">
+            
+            <!-- Step 1 -->
+            <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#00F5D4] text-sm sm:text-base font-[300]">
+                            01
+                        </div>
+                    </div>
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Join & Accept Opt-In</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Submit your Google Play Store Gmail address on the landing page form. Once our team manually whitelists your account, open the official Google testing invite link sent to your inbox and select <strong class="text-white font-[300]">"Become a Tester"</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#00FF87] text-sm sm:text-base font-[300]">
+                            02
+                        </div>
+                    </div>
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Install on Wear OS & Phone</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Download Orsa directly from the Google Play Store on your Wear OS 4+ smartwatch. Make sure to open the companion app on your phone to trigger health permission prompts.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 3: Health Connect Brand Setup (Full Width) -->
+            <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 md:col-span-2">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#FF007F] text-sm sm:text-base font-[300]">
+                        03
+                    </div>
+                </div>
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-3">Configure Health Connect By Phone Brand</h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-4">
+                    Orsa relies on Google Health Connect for zero-cloud local syncing. Ensure Health Connect is installed via Google Play (built-in on Android 14+), then enable sync permissions for your device brand:
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs font-[300]">
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
+                        <span class="text-[#00F5D4] block mb-1">Samsung Galaxy</span>
+                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">Samsung Health</strong> &rarr; Settings &rarr; Health Connect &rarr; Turn ON all metrics (Heart Rate, HRV, Sleep) and allow Orsa read access.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
+                        <span class="text-[#00FF87] block mb-1">Google Pixel</span>
+                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">Fitbit / Google Fit</strong> &rarr; Settings &rarr; Health Connect &rarr; Grant Orsa permission to access Sleep Stages, Resting Heart Rate, and HRV.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
+                        <span class="text-[#FF007F] block mb-1">Xiaomi & POCO</span>
+                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">Mi Fitness</strong> &rarr; Profile &rarr; Connected Apps &rarr; Enable Health Connect sync, then allow Orsa read permissions in Phone Settings &rarr; Privacy &rarr; Health Connect.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
+                        <span class="text-[#9D4EDD] block mb-1">OnePlus & OPPO</span>
+                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">OHealth App</strong> &rarr; Profile &rarr; Data Sharing / Health Connect &rarr; Link Health Connect and allow Orsa permission to read biometric intervals.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10 sm:col-span-2 lg:col-span-2">
+                        <span class="text-white block mb-1">Other Android Devices (Motorola, Nothing, Vivo, RealMe, Huawei)</span>
+                        <p class="text-white/60 leading-normal">Ensure the <strong class="text-white font-[300]">Google Health Connect</strong> app is installed from Play Store. Go to Phone Settings &rarr; Security & Privacy &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong> and switch <strong class="text-white font-[300]">Allow All</strong> to ON.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#9D4EDD] text-sm sm:text-base font-[300]">
+                            04
+                        </div>
+                    </div>
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Sleep & Build Your Baseline</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Wear your watch consistently while sleeping for <strong class="text-white font-[300]">3 to 5 consecutive nights</strong>. Orsa requires this initial timeframe to establish your personal Resting Heart Rate (RHR) and Heart Rate Variability (HRV) baseline averages.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#00F5D4] text-sm sm:text-base font-[300]">
+                            05
+                        </div>
+                    </div>
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Check Daily Recovery & Tiles</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                        Wake up and check your <strong class="text-white font-[300]">Body Fuel Score (0–100%)</strong> instantly on your watch face, glanceable Tiles, or complications to evaluate whether your nervous system is ready for high strain or requires active rest.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 6 (Full Width Spanning) -->
+            <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 md:col-span-2">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#00FF87] text-sm sm:text-base font-[300]">
+                        06
+                    </div>
+                </div>
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Send Feedback & Report Bugs</h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
+                    Encountered an issue or have suggestions for new features? You can submit private beta feedback directly through the Google Play Store listing page or email our development team at <a href="mailto:orsahealth@gmail.com" class="text-white underline hover:text-[#00F5D4] transition-colors">orsahealth@gmail.com</a>. Your input helps shape the official public release!
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer stretched to screen ends -->
+    <footer class="w-full max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-center z-25 text-[9px] sm:text-[11px] font-[300] text-white/40 uppercase tracking-widest">
+        <p class="text-center md:text-left leading-relaxed font-[200] text-[9px] sm:text-[11px]">
+            Orsa is created for general health and energy awareness. Not a medical device.
+        </p>
+        <p class="shrink-0 font-[200] text-[9px] sm:text-[11px]">&copy; 2026 Orsa Ecosystem. All rights reserved.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
