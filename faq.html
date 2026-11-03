@@ -70,6 +70,17 @@
             border-color: rgba(255, 255, 255, 0.35);
             box-shadow: 0 0 30px -5px rgba(255, 255, 255, 0.1);
         }
+
+        /* Hide details marker across browsers */
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary {
+            list-style: none;
+        }
+        details[open] .chevron-icon {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
@@ -119,114 +130,144 @@
         <div class="flex flex-col gap-4 sm:gap-6 w-full mb-12 sm:mb-20">
             
             <!-- FAQ Item 1 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#00F5D4] font-[200]">01</span> 
-                    What is Orsa and how does it calculate my body fuel score?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00F5D4] font-[200]">01</span> 
+                        What is Orsa and how does it calculate my body fuel score?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     Orsa evaluates your nightly resting heart rate (RHR) trends and heart rate variability (HRV) ratios to generate a single 0–100% body fuel score. This tells you precisely when your body is fully recharged to train hard or when it requires extra rest. Tailored insights are provided to guide you.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 2 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#00FF87] font-[200]">02</span> 
-                    How do I use Orsa and interpret my results to get actionable insights?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00FF87] font-[200]">02</span> 
+                        How do I use Orsa and interpret my results to get actionable insights?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     Wear your watch consistently while sleeping to let Orsa build your nightly baseline. Check your score first thing in the morning: a high score (75%–100%) indicates your autonomic nervous system is recovered and ready for high strain, while a lower score signals a need for active recovery or rest.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 3 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#9D4EDD] font-[200]">03</span> 
-                    Do I need a companion phone app to view my stats?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#9D4EDD] font-[200]">03</span> 
+                        Do I need a companion phone app to view my stats?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     No. Orsa operates completely on your wrist as a standalone Wear OS application. You can view interactive 7-day trajectory graphs and 30-day historical bar charts directly on your watch screen without needing an active phone companion app open.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 4 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#00F5D4] font-[200]">04</span> 
-                    What are the exact device and OS requirements?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00F5D4] font-[200]">04</span> 
+                        What are the exact device and OS requirements?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     Orsa requires Wear OS 4.0 or newer. Compatible hardware includes Samsung Galaxy Watch 4, 5, 6, 7+, FE, Classic & Ultra series, Google Pixel Watch 1, 2, 3+, OnePlus Watch 2+, Xiaomi Watch 2+, and OPPO Watch X. It also relies on an Android phone running Google Health Connect for zero-cloud background synchronization.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 5 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#00FF87] font-[200]">05</span> 
-                    Is my health and biometric data secure and private?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00FF87] font-[200]">05</span> 
+                        Is my health and biometric data secure and private?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     Yes, 100% private. Your personal biometric data never uploads to external cloud servers. All metric computations run securely on your own device, and you maintain full ownership with options to export your logs to local CSV storage at any time.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 6 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#FF007F] font-[200]">06</span> 
-                    Can I display Orsa body fuel scores directly on my watch face?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#FF007F] font-[200]">06</span> 
+                        Can I display Orsa body fuel scores directly on my watch face?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     Yes. Orsa includes built-in Wear OS watch face complications and dedicated glanceable Tiles. You can monitor your current body fuel percentage and daily recovery trend instantly without opening the full application.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 7 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#9D4EDD] font-[200]">07</span> 
-                    What visual customization options does Orsa offer?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#9D4EDD] font-[200]">07</span> 
+                        What visual customization options does Orsa offer?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     Orsa supports custom aesthetic color themes on-device. You can personalize your watch UI, trajectory graphs, and complication accents with high-contrast ambient palettes tailored for AMOLED displays.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 8 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#00F5D4] font-[200]">08</span> 
-                    Does Orsa drain smartwatch battery life in the background?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00F5D4] font-[200]">08</span> 
+                        Does Orsa drain smartwatch battery life in the background?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     No. Orsa is optimized for ultra-low energy consumption. Instead of running continuous background sensor polling, it pulls consolidated biometric intervals directly from Google Health Connect during natural wake-up events.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 9 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#00FF87] font-[200]">09</span> 
-                    How does the Closed Beta testing invitation work?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00FF87] font-[200]">09</span> 
+                        How does the Closed Beta testing invitation work?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     When you submit your Play Store Gmail address on our landing page, we will manually whitelist your email for Google Play closed testing. You will receive an official Google testing link and setup instructions directly in your inbox.
                 </p>
-            </div>
+            </details>
 
             <!-- FAQ Item 10 -->
-            <div class="orsa-glass-card p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-white/10">
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2 flex items-center gap-3">
-                    <span class="text-xs text-[#FF007F] font-[200]">10</span> 
-                    Is Orsa a certified medical device?
-                </h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed pl-6 sm:pl-7">
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#FF007F] font-[200]">10</span> 
+                        Is Orsa a certified medical device?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
                     No. Orsa is created purely for general health, wellness, and fitness tracking awareness. It is not a medical device and should not be used to diagnose, treat, cure, or prevent any medical conditions.
                 </p>
-            </div>
+            </details>
 
         </div>
 
