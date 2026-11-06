@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Orsa</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Floating Glow Orbs Keyframes */
+        @keyframes float-teal {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, 40px) scale(1.15); }
+        }
+        @keyframes float-green {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-35px, 30px) scale(1.1); }
+        }
+        @keyframes float-pink {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(30px, -35px) scale(1.2); }
+        }
+        @keyframes float-purple {
+            0%, 100% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-30px, -30px) scale(1.1); }
+        }
+
+        .orb-teal {
+            background: #00F5D4;
+            animation: float-teal 14s ease-in-out infinite;
+        }
+        .orb-green {
+            background: #00FF87;
+            animation: float-green 17s ease-in-out infinite;
+        }
+        .orb-pink {
+            background: #FF007F;
+            animation: float-pink 16s ease-in-out infinite;
+        }
+        .orb-purple {
+            background: #9D4EDD;
+            animation: float-purple 18s ease-in-out infinite;
+        }
+
+        /* Ultra-light glassmorphic card styling */
+        .orsa-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
+
+    <!-- Subtle, Diffusion-Blended Ambient Mobile Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <!-- Teal Orb -->
+        <div class="absolute top-[2%] left-[-10%] sm:left-[12%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[110px] sm:blur-[140px] opacity-[0.22] sm:opacity-[0.20] orb-teal"></div>
+        
+        <!-- Pink Orb -->
+        <div class="absolute top-[18%] right-[-10%] sm:right-[8%] w-[320px] sm:w-[520px] h-[320px] sm:h-[520px] rounded-full blur-[120px] sm:blur-[160px] opacity-[0.20] sm:opacity-[0.18] orb-pink"></div>
+        
+        <!-- Green Orb -->
+        <div class="absolute top-[50%] left-[-5%] sm:left-[8%] w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] rounded-full blur-[110px] sm:blur-[150px] opacity-[0.20] sm:opacity-[0.18] orb-green"></div>
+        
+        <!-- Purple Orb -->
+        <div class="absolute bottom-[2%] right-[-5%] sm:right-[15%] w-[340px] sm:w-[580px] h-[340px] sm:h-[580px] rounded-full blur-[130px] sm:blur-[170px] opacity-[0.22] sm:opacity-[0.22] orb-purple"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-6xl mx-auto px-5 sm:px-8 py-6 sm:py-10 flex justify-start items-center z-30">
+        <div class="text-lg sm:text-2xl font-[300] tracking-[0.25em] sm:tracking-[0.3em] cursor-pointer">
+            ORSA
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-4xl mx-auto px-4 sm:px-8 py-4 sm:py-12 z-20 text-left">
+        
+        <!-- Page Title -->
+        <div class="mb-8 sm:mb-10 text-center sm:text-left">
+            <h1 class="text-3xl sm:text-6xl md:text-7xl font-[200] tracking-tight mb-2 sm:mb-3 uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] via-[#00FF87] via-[#FF007F] to-[#9D4EDD]">
+                Terms of Service
+            </h1>
+            <p class="text-[11px] sm:text-sm font-[300] text-white/50 tracking-wider">
+                Last Updated: November 6, 2026
+            </p>
+        </div>
+
+        <!-- Terms Content Card Container -->
+        <div class="orsa-glass-card p-5 sm:p-10 rounded-2xl sm:rounded-[32px] space-y-6 sm:space-y-8 font-[300] text-xs sm:text-base text-white/80 leading-relaxed shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/10">
+            
+            <p class="text-white/90">
+                Welcome to Orsa. These Terms of Service ("Terms") govern your access to and use of the Orsa Wear OS application and associated services ("Application"). By installing, accessing, or using Orsa, you agree to be bound by these Terms.
+            </p>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    1. Application Scope & On-Device Processing
+                </h2>
+                <p>
+                    Orsa is a standalone Wear OS application engineered for local, on-device wellness tracking.
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li>All score calculations, biometric algorithms, and trend analysis are executed directly on your Wear OS device.</li>
+                    <li>Orsa operates without external server reliance for health evaluation, ensuring your metrics remain private to your local hardware.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    2. License & Intellectual Property
+                </h2>
+                <p>
+                    Subject to your compliance with these Terms, Orsa grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download and use the Application on compatible Wear OS devices for personal, non-commercial purposes.
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Ownership:</strong> All design elements, source code, visual components, algorithms, and branding related to Orsa remain the exclusive intellectual property of the developer.</li>
+                    <li><strong class="text-white font-[300]">Restrictions:</strong> You agree not to reverse engineer, decompile, modify, distribute, or create derivative works based on Orsa.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    3. Free Trial & In-App Purchases (Google Play Billing)
+                </h2>
+                <p>
+                    Orsa offers a local free trial period followed by premium upgrade options.
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Free Trial:</strong> New users receive full access to Orsa features for a 14-day trial period commencing upon initial setup.</li>
+                    <li><strong class="text-white font-[300]">In-App Purchases & Subscriptions:</strong> Premium functionality can be permanently unlocked via a lifetime purchase or subscription processed through Google Play Billing v7.</li>
+                    <li><strong class="text-white font-[300]">Payment Processing:</strong> All financial transactions, billing details, cancellations, and refund requests are handled exclusively by Google Play under the Google Play Terms of Service.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    4. Medical Disclaimer
+                </h2>
+                <p class="text-white/70">
+                    ORSA IS DESIGNED EXCLUSIVELY FOR GENERAL WELLNESS, FITNESS TRACKING, AND PERSONAL INFORMATIONAL PURPOSES. IT IS NOT A MEDICAL DEVICE AND IS NOT INTENDED TO DIAGNOSE, TREAT, CURE, MITIGATE, OR PREVENT ANY DISEASE OR MEDICAL CONDITION. ALWAYS SEEK THE ADVICE OF A QUALIFIED HEALTHCARE PROVIDER WITH ANY QUESTIONS REGARDING MEDICAL CONDITIONS OR HEALTH GOALS.
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    5. User Responsibilities & Sensor Accuracy
+                </h2>
+                <p>
+                    Orsa relies on data accessed through Wear OS system sensors and Google Health Connect (such as Heart Rate, HRV, and Sleep data).
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li>Calculations depend on hardware sensor accuracy, proper device fit, and system permission grants.</li>
+                    <li>You are responsible for ensuring your hardware and Android software environment meet operational requirements.</li>
+                </ul>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    6. Limitation of Liability
+                </h2>
+                <p class="text-white/70">
+                    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ORSA AND ITS DEVELOPER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF DATA, USE, OR GOODWILL RESULTING FROM YOUR ACCESS TO OR INABILITY TO ACCESS THE APPLICATION.
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    7. Termination
+                </h2>
+                <p class="text-white/70">
+                    You may terminate your agreement with these Terms at any time by uninstalling Orsa from your devices. The developer reserves the right to suspend or discontinue support for the Application at any time.
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    8. Changes to These Terms
+                </h2>
+                <p class="text-white/70">
+                    We reserve the right to revise these Terms at any time. Updated Terms will be posted on this page with an updated "Last Updated" date. Continued use of Orsa following any updates constitutes acceptance of those changes.
+                </p>
+            </section>
+
+            <section class="space-y-2 sm:space-y-3">
+                <h2 class="text-base sm:text-xl font-[300] text-white uppercase tracking-wider border-b border-white/10 pb-2">
+                    9. Contact Information
+                </h2>
+                <p>
+                    If you have any questions concerning these Terms of Service, please contact us at:
+                </p>
+                <ul class="list-disc pl-4 sm:pl-5 space-y-1.5 sm:space-y-2 text-white/70">
+                    <li><strong class="text-white font-[300]">Email:</strong> orsahealth@gmail.com</li>
+                    <li><strong class="text-white font-[300]">Developer Name:</strong> Raihaan</li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer stretched to screen ends -->
+    <footer class="w-full max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 text-center z-20 text-[9px] sm:text-[11px] font-[300] text-white/40 uppercase tracking-widest">
+        <p class="text-center md:text-left leading-relaxed font-[200] text-[9px] sm:text-[11px]">
+            Orsa is created for general health and energy awareness. Not a medical device.
+        </p>
+        <p class="shrink-0 font-[200] text-[9px] sm:text-[11px]">&copy; 2026 Orsa. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
