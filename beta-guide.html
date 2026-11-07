@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
     <!-- Google Fonts: Nunito -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
         html, body {
             overflow-x: hidden;
@@ -71,8 +72,27 @@
             box-shadow: 0 0 30px -5px rgba(255, 255, 255, 0.1);
             transform: translateY(-4px);
         }
+
+        /* Responsive Smooth Accordion */
+        .accordion-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        }
+        .accordion-content.open {
+            max-height: 800px;
+            opacity: 1;
+        }
+        .chevron-icon {
+            transition: transform 0.3s ease;
+        }
+        .chevron-icon.rotate {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
+
 <body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
 
     <!-- Subtle, Diffusion-Blended Ambient Mobile Background -->
@@ -129,9 +149,12 @@
                         </div>
                     </div>
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Join & Accept Opt-In</h3>
-                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                        Submit your Google Play Store Gmail address on the landing page form. Once our team manually whitelists your account, open the official Google testing invite link sent to your inbox and select <strong class="text-white font-[300]">"Become a Tester"</strong>.
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
+                        Open the official Google Play Opt-In Link in any browser on your phone or computer. Log in with the exact Google Account connected to your smartwatch and select <strong class="text-white font-[300]">"Become a Tester"</strong>.
                     </p>
+                    <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-[300] text-white/60 leading-normal">
+                        <strong class="text-[#00F5D4] font-[300]">Precaution:</strong> Make sure you opt in using the exact same Gmail address logged into the Google Play Store on your Wear OS watch, otherwise the listing will appear as unavailable.
+                    </div>
                 </div>
             </div>
 
@@ -144,45 +167,117 @@
                         </div>
                     </div>
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Install on Wear OS</h3>
-                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                        Download Orsa directly from the Google Play Store on your Wear OS 4+ smartwatch. Make sure to open the companion app on your phone to trigger health permission prompts.
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-2">
+                        After tapping <strong class="text-white font-[300]">"Become a Tester"</strong>, click the blue <strong class="text-white font-[300]">"Download it on Google Play"</strong> link on the confirmation page to open the store listing. Install Orsa on your <strong class="text-white font-[300]">Wear OS 4+</strong> smartwatch using either method:
                     </p>
+                    <ul class="text-xs sm:text-sm font-[300] text-white/70 space-y-1.5 list-disc list-inside mb-4">
+                        <li><strong class="text-white font-[300]">Via Phone/Web:</strong> Open the Play Store page &rarr; tap the dropdown arrow next to the install button &rarr; select your smartwatch and push install.</li>
+                        <li><strong class="text-white font-[300]">From your Watch:</strong> Open Google Play Store directly on your watch &rarr; search for "Orsa" &rarr; tap Install.</li>
+                    </ul>
+                    <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-[300] text-white/60 leading-normal">
+                        <strong class="text-[#00FF87] font-[300]">Phone Compatibility Notice:</strong> Because Orsa is a standalone watch application, checking the link on your phone browser may show <em>"Your device isn't compatible with this version"</em>. Simply use the device selector dropdown or open the Play Store right on your watch to bypass this.
+                    </div>
                 </div>
             </div>
 
-            <!-- Step 3: Health Connect Brand Setup (Full Width) -->
+            <!-- Step 3: Health Connect Brand Setup (Full Width Collapsible Accordion) -->
             <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 md:col-span-2">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#FF007F] text-sm sm:text-base font-[300]">
                         03
                     </div>
                 </div>
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-3">Configure Health Connect By Phone Brand</h3>
-                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-4">
-                    Orsa relies on Google Health Connect for zero-cloud local syncing. Ensure Health Connect is installed via Google Play (built-in on Android 14+), then enable sync permissions for your device brand:
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Grant Health Connect Permissions (One-Time Setup)</h3>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
+                    To compute your daily Body Fuel Score and HRV recovery metrics accurately, Orsa needs access to read your sleep and heart rate data via Health Connect. Open Orsa on your watch for the first time, tap <strong class="text-white font-[300]">"Grant Permissions"</strong>, and select <strong class="text-white font-[300]">"Allow All"</strong> (or toggle on access for Heart Rate, Sleep, and Heart Rate Variability).
+                </p>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-5">
+                    Ensure sync permissions are enabled for your specific phone brand below:
                 </p>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs font-[300]">
-                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
-                        <span class="text-[#00F5D4] block mb-1">Samsung Galaxy</span>
-                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">Samsung Health</strong> &rarr; Settings &rarr; Health Connect &rarr; Turn ON all metrics (Heart Rate, HRV, Sleep) and allow Orsa read access.</p>
+                <!-- Collapsible Brand Accordion List -->
+                <div class="space-y-3 text-xs font-[300]">
+
+                    <!-- Samsung Galaxy Item -->
+                    <div class="rounded-xl bg-white/[0.02] border border-white/10 overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('samsung-acc', 'samsung-chev')" class="w-full p-4 flex items-center justify-between text-left hover:bg-white/[0.03] transition-colors focus:outline-none">
+                            <span class="text-[#00F5D4] font-[300] text-sm">Samsung Galaxy</span>
+                            <i data-lucide="chevron-down" id="samsung-chev" class="chevron-icon w-4 h-4 text-white/50"></i>
+                        </button>
+                        <div id="samsung-acc" class="accordion-content">
+                            <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
+                                <p>1. Open <strong class="text-white font-[300]">Samsung Health</strong> on your phone &rarr; tap the 3 dots (top right) &rarr; Settings &rarr; <strong class="text-white font-[300]">Health Connect</strong>.</p>
+                                <p>2. Ensure <strong class="text-white font-[300]">Samsung Health</strong> is writing Heart Rate, HRV, and Sleep data to Health Connect.</p>
+                                <p>3. Select <strong class="text-white font-[300]">Orsa</strong> under App Permissions and grant <strong class="text-white font-[300]">Allow All</strong> read access.</p>
+                                <p class="text-[11px] text-white/50 italic">Precaution: Disable "Pause app activity if unused" for Samsung Health to prevent overnight sync delays.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
-                        <span class="text-[#00FF87] block mb-1">Google Pixel</span>
-                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">Fitbit / Google Fit</strong> &rarr; Settings &rarr; Health Connect &rarr; Grant Orsa permission to access Sleep Stages, Resting Heart Rate, and HRV.</p>
+
+                    <!-- Google Pixel Item -->
+                    <div class="rounded-xl bg-white/[0.02] border border-white/10 overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('pixel-acc', 'pixel-chev')" class="w-full p-4 flex items-center justify-between text-left hover:bg-white/[0.03] transition-colors focus:outline-none">
+                            <span class="text-[#00FF87] font-[300] text-sm">Google Pixel</span>
+                            <i data-lucide="chevron-down" id="pixel-chev" class="chevron-icon w-4 h-4 text-white/50"></i>
+                        </button>
+                        <div id="pixel-acc" class="accordion-content">
+                            <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
+                                <p>1. Open Phone Settings &rarr; Security & Privacy &rarr; Privacy &rarr; <strong class="text-white font-[300]">Health Connect</strong>.</p>
+                                <p>2. Tap App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
+                                <p>3. Switch permission access for Sleep Stages, Resting Heart Rate, and HRV to <strong class="text-white font-[300]">Allow All</strong>.</p>
+                                <p class="text-[11px] text-white/50 italic">Guidance: Ensure Fitbit or Google Fit is configured as the primary data writer inside Health Connect.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
-                        <span class="text-[#FF007F] block mb-1">Xiaomi & POCO</span>
-                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">Mi Fitness</strong> &rarr; Profile &rarr; Connected Apps &rarr; Enable Health Connect sync, then allow Orsa read permissions in Phone Settings &rarr; Privacy &rarr; Health Connect.</p>
+
+                    <!-- Xiaomi & POCO Item -->
+                    <div class="rounded-xl bg-white/[0.02] border border-white/10 overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('xiaomi-acc', 'xiaomi-chev')" class="w-full p-4 flex items-center justify-between text-left hover:bg-white/[0.03] transition-colors focus:outline-none">
+                            <span class="text-[#FF007F] font-[300] text-sm">Xiaomi & POCO</span>
+                            <i data-lucide="chevron-down" id="xiaomi-chev" class="chevron-icon w-4 h-4 text-white/50"></i>
+                        </button>
+                        <div id="xiaomi-acc" class="accordion-content">
+                            <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
+                                <p>1. Open <strong class="text-white font-[300]">Mi Fitness</strong> &rarr; Profile &rarr; Connected Apps &rarr; Enable Health Connect sync.</p>
+                                <p>2. Navigate to Phone Settings &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
+                                <p>3. Enable read permissions for Heart Rate, Sleep, and HRV.</p>
+                                <p class="text-[11px] text-white/50 italic">Precaution (MIUI/HyperOS): Set Mi Fitness battery saver setting to "No restrictions" to allow background biometric sync.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
-                        <span class="text-[#9D4EDD] block mb-1">OnePlus & OPPO</span>
-                        <p class="text-white/60 leading-normal">Open <strong class="text-white font-[300]">OHealth App</strong> &rarr; Profile &rarr; Data Sharing / Health Connect &rarr; Link Health Connect and allow Orsa permission to read biometric intervals.</p>
+
+                    <!-- OnePlus & OPPO Item -->
+                    <div class="rounded-xl bg-white/[0.02] border border-white/10 overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('oneplus-acc', 'oneplus-chev')" class="w-full p-4 flex items-center justify-between text-left hover:bg-white/[0.03] transition-colors focus:outline-none">
+                            <span class="text-[#9D4EDD] font-[300] text-sm">OnePlus & OPPO</span>
+                            <i data-lucide="chevron-down" id="oneplus-chev" class="chevron-icon w-4 h-4 text-white/50"></i>
+                        </button>
+                        <div id="oneplus-acc" class="accordion-content">
+                            <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
+                                <p>1. Open <strong class="text-white font-[300]">OHealth App</strong> &rarr; Profile &rarr; Data Sharing / Health Connect &rarr; Link Health Connect.</p>
+                                <p>2. Go to Phone Settings &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
+                                <p>3. Allow Orsa permission to read biometric intervals.</p>
+                                <p class="text-[11px] text-white/50 italic">Precaution (ColorOS/OxygenOS): Turn off Auto-Optimize for OHealth under Battery settings.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/10 sm:col-span-2 lg:col-span-2">
-                        <span class="text-white block mb-1">Other Android Devices (Motorola, Nothing, Vivo, RealMe, Huawei)</span>
-                        <p class="text-white/60 leading-normal">Ensure the <strong class="text-white font-[300]">Google Health Connect</strong> app is installed from Play Store. Go to Phone Settings &rarr; Security & Privacy &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong> and switch <strong class="text-white font-[300]">Allow All</strong> to ON.</p>
+
+                    <!-- Other Android Devices Item -->
+                    <div class="rounded-xl bg-white/[0.02] border border-white/10 overflow-hidden">
+                        <button type="button" onclick="toggleAccordion('other-acc', 'other-chev')" class="w-full p-4 flex items-center justify-between text-left hover:bg-white/[0.03] transition-colors focus:outline-none">
+                            <span class="text-white font-[300] text-sm">Other Android Devices (Motorola, Nothing, Vivo, Realme, Huawei)</span>
+                            <i data-lucide="chevron-down" id="other-chev" class="chevron-icon w-4 h-4 text-white/50"></i>
+                        </button>
+                        <div id="other-acc" class="accordion-content">
+                            <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
+                                <p>1. Ensure <strong class="text-white font-[300]">Google Health Connect</strong> is installed from the Play Store.</p>
+                                <p>2. Go to Phone Settings &rarr; Security & Privacy &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
+                                <p>3. Switch <strong class="text-white font-[300]">Allow All</strong> permissions to ON.</p>
+                                <p class="text-[11px] text-white/50 italic">Guidance: Ensure your primary watch companion app (e.g., Health Connect, Google Fit) has background data permission enabled.</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -195,9 +290,15 @@
                         </div>
                     </div>
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Sleep & Build Your Baseline</h3>
-                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                        Wear your watch consistently while sleeping for <strong class="text-white font-[300]">7 consecutive nights</strong>. Orsa requires this initial timeframe to establish your personal Resting Heart Rate (RHR) and Heart Rate Variability (HRV) baseline averages.
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
+                        Once permissions are granted, Orsa automatically begins analyzing your overnight metrics.
                     </p>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-4">
+                        <strong class="text-white font-[300]">Calibration Mode (Days 1–7):</strong> Wear your watch consistently while sleeping. Orsa spends its first few days establishing your personal baseline variances, displaying a <span class="text-[#00F5D4]">CALIBRATING (X/7)</span> status on screen.
+                    </p>
+                    <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-[300] text-white/60 leading-normal space-y-1.5">
+                        <p><strong class="text-[#9D4EDD] font-[300]">When it MUST be worn:</strong> Fasten your smartwatch snugly about one finger's width above your wrist bone <strong class="text-white font-[300]">throughout the entire night while sleeping</strong>. Overnight heart rate and HRV are mandatory for accurate daily scoring.</p>
+                    </div>
                 </div>
             </div>
 
@@ -210,9 +311,12 @@
                         </div>
                     </div>
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Check Daily Recovery & Tiles</h3>
-                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed">
-                        Wake up and check your <strong class="text-white font-[300]">Body Fuel Score (0–100%)</strong> instantly on your watch face, glanceable Tiles, or complications to evaluate whether your nervous system is ready for high strain or requires active rest.
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
+                        <strong class="text-white font-[300]">Full Insights:</strong> Once calibrated, your full daily <strong class="text-white font-[300]">Body Fuel Scores (0–100%)</strong>, 7-day trajectories, and smart recovery insights will generate automatically every morning upon waking up! Access them instantly on your watch face, glanceable Tiles, or complications.
                     </p>
+                    <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-[300] text-white/60 leading-normal">
+                        <strong class="text-[#00F5D4] font-[300]">Pro Tip:</strong> Swipe left on your main watch face to add the Orsa Body Fuel Tile for one-tap access to your daily recovery score.
+                    </div>
                 </div>
             </div>
 
@@ -241,9 +345,31 @@
         <p class="shrink-0 font-[200] text-[9px] sm:text-[11px]">&copy; 2026 Orsa Ecosystem. All rights reserved.</p>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Initialize Lucide Icons & Accordion Logic -->
     <script>
         lucide.createIcons();
+
+        function toggleAccordion(accId, chevId) {
+            const content = document.getElementById(accId);
+            const chevron = document.getElementById(chevId);
+            
+            const isOpen = content.classList.contains('open');
+            
+            // Close all open accordion items
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                item.classList.remove('open');
+            });
+            document.querySelectorAll('.chevron-icon').forEach(icon => {
+                icon.classList.remove('rotate');
+            });
+
+            // Toggle current item if it wasn't open
+            if (!isOpen) {
+                content.classList.add('open');
+                chevron.classList.add('rotate');
+            }
+        }
     </script>
 </body>
+
 </html>
