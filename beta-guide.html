@@ -81,7 +81,7 @@
             transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
         }
         .accordion-content.open {
-            max-height: 800px;
+            max-height: 900px;
             opacity: 1;
         }
         .chevron-icon {
@@ -123,7 +123,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 flex flex-col items-center z-20">
+    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 flex flex-col items-center z-25">
         
         <!-- Page Header Title -->
         <div class="text-center mb-10 sm:mb-16">
@@ -133,7 +133,7 @@
                 </span>
             </h1>
             <p class="text-xs sm:text-base text-white/70 max-w-xl mx-auto font-[300] leading-relaxed px-2">
-                Follow this complete 6-step walkthrough to join our testing pool, configure Health Connect across your specific phone brand, build your baseline, and submit feedback.
+                Follow this complete step-by-step guide to join the beta, install Orsa on your smartwatch, configure Health Connect, and build your baseline.
             </p>
         </div>
 
@@ -150,10 +150,10 @@
                     </div>
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Join & Accept Opt-In</h3>
                     <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
-                        Open the official Google Play Opt-In Link in any browser on your phone or computer. Log in with the exact Google Account connected to your smartwatch and select <strong class="text-white font-[300]">"Become a Tester"</strong>.
+                        Open the official Google Play Opt-In link in your web browser. Log in using the <strong class="text-white font-[300]">exact same Google account</strong> logged into your smartwatch and tap <strong class="text-white font-[300]">"Become a Tester"</strong>.
                     </p>
                     <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-[300] text-white/60 leading-normal">
-                        <strong class="text-[#00F5D4] font-[300]">Precaution:</strong> Make sure you opt in using the exact same Gmail address logged into the Google Play Store on your Wear OS watch, otherwise the listing will appear as unavailable.
+                        <strong class="text-[#00F5D4] font-[300]">Precaution:</strong> Accounts must match between your store login and watch so the app becomes available for download.
                     </div>
                 </div>
             </div>
@@ -166,33 +166,29 @@
                             02
                         </div>
                     </div>
-                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Install on Wear OS</h3>
-                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-2">
-                        After tapping <strong class="text-white font-[300]">"Become a Tester"</strong>, click the blue <strong class="text-white font-[300]">"Download it on Google Play"</strong> link on the confirmation page to open the store listing. Install Orsa on your <strong class="text-white font-[300]">Wear OS 4+</strong> smartwatch using either method:
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Install on Your Smartwatch</h3>
+                    <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
+                        After tapping <strong class="text-white font-[300]">"Become a Tester"</strong>, click the blue <strong class="text-white font-[300]">"Download it on Google Play"</strong> link on the confirmation page. Use the device dropdown menu to push and install Orsa directly to your Wear OS watch.
                     </p>
-                    <ul class="text-xs sm:text-sm font-[300] text-white/70 space-y-1.5 list-disc list-inside mb-4">
-                        <li><strong class="text-white font-[300]">Via Phone/Web:</strong> Open the Play Store page &rarr; tap the dropdown arrow next to the install button &rarr; select your smartwatch and push install.</li>
-                        <li><strong class="text-white font-[300]">From your Watch:</strong> Open Google Play Store directly on your watch &rarr; search for "Orsa" &rarr; tap Install.</li>
-                    </ul>
                     <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-[300] text-white/60 leading-normal">
-                        <strong class="text-[#00FF87] font-[300]">Phone Compatibility Notice:</strong> Because Orsa is a standalone watch application, checking the link on your phone browser may show <em>"Your device isn't compatible with this version"</em>. Simply use the device selector dropdown or open the Play Store right on your watch to bypass this.
+                        <strong class="text-[#00FF87] font-[300]">Pro Tip:</strong> Using the blue link on your phone/computer browser makes remote watch installation effortless.
                     </div>
                 </div>
             </div>
 
-            <!-- Step 3: Health Connect Brand Setup (Full Width Collapsible Accordion) -->
+            <!-- Step 3: Brand Setup Accordion -->
             <div class="orsa-glass-card p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 md:col-span-2">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center text-[#FF007F] text-sm sm:text-base font-[300]">
                         03
                     </div>
                 </div>
-                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Grant Health Connect Permissions (One-Time Setup)</h3>
+                <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider mb-2">Configure Health Connect (One-Time Setup)</h3>
                 <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-3">
-                    To compute your daily Body Fuel Score and HRV recovery metrics accurately, Orsa needs access to read your sleep and heart rate data via Health Connect. Open Orsa on your watch for the first time, tap <strong class="text-white font-[300]">"Grant Permissions"</strong>, and select <strong class="text-white font-[300]">"Allow All"</strong> (or toggle on access for Heart Rate, Sleep, and Heart Rate Variability).
+                    Orsa reads your health metrics locally via Google Health Connect. Open Orsa on your watch first and tap <strong class="text-white font-[300]">"Grant Access"</strong> on the popup prompt.
                 </p>
                 <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed mb-5">
-                    Ensure sync permissions are enabled for your specific phone brand below:
+                    Ensure your watch companion app is writing data properly by selecting your phone brand below:
                 </p>
                 
                 <!-- Collapsible Brand Accordion List -->
@@ -207,9 +203,7 @@
                         <div id="samsung-acc" class="accordion-content">
                             <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
                                 <p>1. Open <strong class="text-white font-[300]">Samsung Health</strong> on your phone &rarr; tap the 3 dots (top right) &rarr; Settings &rarr; <strong class="text-white font-[300]">Health Connect</strong>.</p>
-                                <p>2. Ensure <strong class="text-white font-[300]">Samsung Health</strong> is writing Heart Rate, HRV, and Sleep data to Health Connect.</p>
-                                <p>3. Select <strong class="text-white font-[300]">Orsa</strong> under App Permissions and grant <strong class="text-white font-[300]">Allow All</strong> read access.</p>
-                                <p class="text-[11px] text-white/50 italic">Precaution: Disable "Pause app activity if unused" for Samsung Health to prevent overnight sync delays.</p>
+                                <p>2. Ensure <strong class="text-white font-[300]">Samsung Health</strong> has <strong class="text-white font-[300]">Write Access</strong> enabled for Heart Rate, HRV, and Sleep data.</p>
                             </div>
                         </div>
                     </div>
@@ -223,9 +217,7 @@
                         <div id="pixel-acc" class="accordion-content">
                             <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
                                 <p>1. Open Phone Settings &rarr; Security & Privacy &rarr; Privacy &rarr; <strong class="text-white font-[300]">Health Connect</strong>.</p>
-                                <p>2. Tap App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
-                                <p>3. Switch permission access for Sleep Stages, Resting Heart Rate, and HRV to <strong class="text-white font-[300]">Allow All</strong>.</p>
-                                <p class="text-[11px] text-white/50 italic">Guidance: Ensure Fitbit or Google Fit is configured as the primary data writer inside Health Connect.</p>
+                                <p>2. Tap App Permissions &rarr; Select <strong class="text-white font-[300]">Fitbit / Google Fit</strong> and confirm write access is active for sleep and heart rate.</p>
                             </div>
                         </div>
                     </div>
@@ -239,9 +231,7 @@
                         <div id="xiaomi-acc" class="accordion-content">
                             <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
                                 <p>1. Open <strong class="text-white font-[300]">Mi Fitness</strong> &rarr; Profile &rarr; Connected Apps &rarr; Enable Health Connect sync.</p>
-                                <p>2. Navigate to Phone Settings &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
-                                <p>3. Enable read permissions for Heart Rate, Sleep, and HRV.</p>
-                                <p class="text-[11px] text-white/50 italic">Precaution (MIUI/HyperOS): Set Mi Fitness battery saver setting to "No restrictions" to allow background biometric sync.</p>
+                                <p>2. Confirm Mi Fitness is writing Heart Rate, Sleep, and HRV to Health Connect.</p>
                             </div>
                         </div>
                     </div>
@@ -255,9 +245,7 @@
                         <div id="oneplus-acc" class="accordion-content">
                             <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
                                 <p>1. Open <strong class="text-white font-[300]">OHealth App</strong> &rarr; Profile &rarr; Data Sharing / Health Connect &rarr; Link Health Connect.</p>
-                                <p>2. Go to Phone Settings &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
-                                <p>3. Allow Orsa permission to read biometric intervals.</p>
-                                <p class="text-[11px] text-white/50 italic">Precaution (ColorOS/OxygenOS): Turn off Auto-Optimize for OHealth under Battery settings.</p>
+                                <p>2. Verify OHealth is writing sleep and heart rate metrics to Health Connect.</p>
                             </div>
                         </div>
                     </div>
@@ -270,10 +258,8 @@
                         </button>
                         <div id="other-acc" class="accordion-content">
                             <div class="p-4 pt-2 text-white/70 leading-relaxed border-t border-white/5 space-y-2">
-                                <p>1. Ensure <strong class="text-white font-[300]">Google Health Connect</strong> is installed from the Play Store.</p>
-                                <p>2. Go to Phone Settings &rarr; Security & Privacy &rarr; Privacy &rarr; Health Connect &rarr; App Permissions &rarr; Select <strong class="text-white font-[300]">Orsa</strong>.</p>
-                                <p>3. Switch <strong class="text-white font-[300]">Allow All</strong> permissions to ON.</p>
-                                <p class="text-[11px] text-white/50 italic">Guidance: Ensure your primary watch companion app (e.g., Health Connect, Google Fit) has background data permission enabled.</p>
+                                <p>1. Ensure <strong class="text-white font-[300]">Google Health Connect</strong> is installed from the Play Store on your phone.</p>
+                                <p>2. Verify your watch companion app has permissions to write health data into Health Connect.</p>
                             </div>
                         </div>
                     </div>

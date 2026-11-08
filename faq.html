@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,6 +84,7 @@
         }
     </style>
 </head>
+
 <body class="relative min-h-screen bg-black text-white flex flex-col justify-between selection:bg-white selection:text-black">
 
     <!-- Subtle, Diffusion-Blended Ambient Mobile Background -->
@@ -122,7 +124,7 @@
                 </span>
             </h1>
             <p class="text-xs sm:text-base text-white/70 max-w-xl mx-auto font-[300] leading-relaxed">
-                Everything you need to know about the Orsa closed beta, biometric data security, device compatibility, and energy scoring engine.
+                Everything you need to know about the Orsa closed beta, biometric data security, device compatibility, battery optimizations, and troubleshooting.
             </p>
         </div>
 
@@ -241,11 +243,57 @@
                 </p>
             </details>
 
-            <!-- FAQ Item 9 -->
+            <!-- FAQ Item 9 (Troubleshooting: Missing Morning Data & Battery Precautions) -->
             <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
                 <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
                         <span class="text-xs text-[#00FF87] font-[200]">09</span> 
+                        Why is my morning Body Fuel score missing or not updating?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
+                    If your score doesn't update upon waking up, your phone's battery optimization system may be delaying background sync for your primary watch companion app. Ensure your watch companion app (e.g., Samsung Health, Fitbit, Mi Fitness, OHealth) has background activity enabled:
+                    <br><br>
+                    • <strong>Samsung:</strong> Settings → Apps → Samsung Health → Battery → Set to <em>Unrestricted</em> (or turn off "Pause app activity if unused").<br>
+                    • <strong>Xiaomi/MIUI:</strong> Settings → Apps → Mi Fitness → Battery Saver → Set to <em>No restrictions</em>.<br>
+                    • <strong>OnePlus/OHealth:</strong> Settings → Battery → More Settings → Optimize Battery Use → OHealth → Set to <em>Don't Optimize</em>.
+                </p>
+            </details>
+
+            <!-- FAQ Item 10 (Troubleshooting: Health Connect Sync Delays) -->
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#FF007F] font-[200]">10</span> 
+                        How do I fix Health Connect sync issues between my watch and phone?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
+                    First, open your watch companion app on your phone (e.g., Samsung Health or Fitbit) to force a sync with your watch. Next, navigate to <strong>Settings → Health Connect → Data and Access → Sleep</strong> to verify that overnight entries exist. If sleep data exists in Health Connect but Orsa still shows an error, open Orsa on your watch and tap "Grant Access" to refresh read permissions.
+                </p>
+            </details>
+
+            <!-- FAQ Item 11 (Troubleshooting: Calibration & Missing Baseline) -->
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#9D4EDD] font-[200]">11</span> 
+                        Why does my watch say CALIBRATING (X/7)?
+                    </h3>
+                    <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
+                </summary>
+                <p class="text-xs sm:text-sm font-[300] text-white/70 leading-relaxed px-5 sm:px-7 pb-5 sm:pb-7 pt-0 pl-11 sm:pl-14">
+                    Orsa uses dynamic biometric baseline modeling rather than population averages. During your first 7 days of wearing the watch to sleep, the app collects nightly HRV and resting heart rate data to build your personalized baseline. Your fully tailored readiness score and trend insights will unlock automatically on Day 8.
+                </p>
+            </details>
+
+            <!-- FAQ Item 12 -->
+            <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
+                <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
+                    <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
+                        <span class="text-xs text-[#00F5D4] font-[200]">12</span> 
                         How does the Closed Beta testing invitation work?
                     </h3>
                     <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
@@ -255,11 +303,11 @@
                 </p>
             </details>
 
-            <!-- FAQ Item 10 -->
+            <!-- FAQ Item 13 -->
             <details class="orsa-glass-card rounded-2xl sm:rounded-3xl border border-white/10 group">
                 <summary class="p-5 sm:p-7 cursor-pointer flex items-center justify-between gap-4 select-none">
                     <h3 class="text-sm sm:text-lg font-[300] text-white uppercase tracking-wider flex items-center gap-3">
-                        <span class="text-xs text-[#FF007F] font-[200]">10</span> 
+                        <span class="text-xs text-[#00FF87] font-[200]">13</span> 
                         Is Orsa a certified medical device?
                     </h3>
                     <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-white/50 group-hover:text-white transition-transform duration-300 chevron-icon shrink-0"></i>
@@ -285,5 +333,7 @@
     <script>
         lucide.createIcons();
     </script>
+
 </body>
+
 </html>
